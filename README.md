@@ -22,3 +22,8 @@
 - font size: `16px`
 - placeholder text color: `#87bbfd`
 - invalid text color: `#FFC7EE`
+
+#### Credit:
+Code has been imported from [Tmarek's github](https://github.com/tmarek-stripe/demo-react-stripe-js) after watching [this youtube video](https://www.youtube.com/watch?v=w1oLdAPyuok&t=161s)
+
+There's modifications made to get the dev setup working and with localisation for Indian export compliance encountered while using stripe. My test environment keys are also published in the repository and will be rolled on / revoked via the stripe dashboard

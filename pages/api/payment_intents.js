@@ -5,7 +5,8 @@ const stripe = new Stripe(process.env.SECRET_KEY);
 export default async (req, res) => {
   if (req.method === "POST") {
     try {
-      const { amount } = req.body;
+      const { amount, address, name } = req.body;
+      console.log(req.body)
       // Psst. For production-ready applications we recommend not using the
       // amount directly from the client without verifying it first. This is to
       // prevent bad actors from changing the total amount on the client before
@@ -15,7 +16,10 @@ export default async (req, res) => {
 
       const paymentIntent = await stripe.paymentIntents.create({
         amount,
-        currency: "usd"
+        currency: "usd",
+        // address:'fsd', 
+        // name:'fsd',
+        description: 'Stripe Donuts'
       });
 
       res.status(200).send(paymentIntent.client_secret);
