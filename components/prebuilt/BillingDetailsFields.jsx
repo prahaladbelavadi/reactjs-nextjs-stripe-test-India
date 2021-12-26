@@ -50,6 +50,7 @@ const BillingDetailsFields = () => {
         label="Country"
         type="text"
         placeholder="US"
+        value="US"
         required
       />
     </>
