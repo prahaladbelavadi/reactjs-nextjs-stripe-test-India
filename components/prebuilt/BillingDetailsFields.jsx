@@ -45,6 +45,13 @@ const BillingDetailsFields = () => {
         placeholder="94103"
         required
       />
+      <FormField
+        name="country"
+        label="Country"
+        type="text"
+        placeholder="US"
+        required
+      />
     </>
   );
 };

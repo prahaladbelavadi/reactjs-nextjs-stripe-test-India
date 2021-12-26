@@ -45,6 +45,7 @@ const CheckoutForm = ({ price, onSuccessfulCheckout }) => {
         line1: ev.target.address.value,
         state: ev.target.state.value,
         postal_code: ev.target.zip.value,
+        country: ev.target.country.value
       },
     };
     setProcessingTo(true);
@@ -141,7 +142,7 @@ const CheckoutForm = ({ price, onSuccessfulCheckout }) => {
       <Row>
         {/* TIP always disable your submit button while processing payments */}
         <SubmitButton disabled={isProcessing || !stripe}>
-          {isProcessing ? 'Processing...' : `Pay $${price}`}
+          {isProcessing ? 'Processing...' : `Pay ₹${price}`}
         </SubmitButton>
       </Row>
     </form>
